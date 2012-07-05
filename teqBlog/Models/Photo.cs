@@ -9,5 +9,8 @@ namespace teqBlog.Models
     {
         public int PhotoID { get; set; }
         public string FileName { get; set; }
+        public int PostID { get; set; }
+
+        public virtual BlogPost BlogPost { get; set; }
     }
 }

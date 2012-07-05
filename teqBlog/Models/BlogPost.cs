@@ -12,5 +12,7 @@ namespace teqBlog.Models
         public string Body { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
+
+        public virtual ICollection<Photo> Photos { get; set; }
     }
 }
