@@ -14,5 +14,6 @@ namespace teqBlog.Models
         public DateTime DateModified { get; set; }
 
         public virtual ICollection<Photo> Photos { get; set; }
+
     }
 }
