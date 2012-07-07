@@ -24,7 +24,7 @@ namespace teqBlog.Controllers
        }
        //
        //GET: /Home/Create
-       public ActionResult Create(BlogPost post)
+       public ActionResult Create()
        {
            return View();
        }
