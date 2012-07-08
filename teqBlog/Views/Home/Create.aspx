@@ -26,6 +26,7 @@
                 <%: Html.TextAreaFor(model => model.Body) %>
                 <%: Html.ValidationMessageFor(model => model.Body) %>
             </div>
+            
             <p>
                 <input type="submit" value="Create" />
             </p>

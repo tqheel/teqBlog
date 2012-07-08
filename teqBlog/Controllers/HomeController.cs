@@ -17,7 +17,7 @@ namespace teqBlog.Controllers
        public ActionResult Index()
        {
            var blogPosts = (from p in context.BlogPosts
-                            select p).OrderByDescending(x => x.DateCreated);
+                            select p).OrderByDescending(x=>x.BlogPostID);
 
 
            return View(blogPosts.ToList());

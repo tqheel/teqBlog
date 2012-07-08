@@ -74,6 +74,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201207080330577_InitialCreate.cs" />
+    <Compile Include="Migrations\201207080330577_InitialCreate.Designer.cs">
+      <DependentUpon>201207080330577_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BlogPost.cs" />
     <Compile Include="Models\Photo.cs" />
     <Compile Include="Models\teqBlogEntities.cs" />
@@ -82,6 +87,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Views\Home\Create.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -105,6 +111,7 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>

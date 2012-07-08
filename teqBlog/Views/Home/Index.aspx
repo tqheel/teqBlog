@@ -9,15 +9,11 @@
 <body>
     <h1>The teq Blog</h1>
     <div id="posts">
-        
         <% foreach (var p in Model)
            { %>
             
            <h2><%= p.Title %></h2>
-           <span class="post-create-date">
-                <%= p.DateCreated %>
-           </span>
-           <div id="post<%= p.PostID %>">
+           <div id="post<%= p.BlogPostID %>">
                 <%= p.Body %>
            </div>
             
