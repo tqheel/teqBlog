@@ -41,6 +41,10 @@ local.properties
 *.user
 *.sln.docstates
 
+# Ignore the App_Data folder which will contain a MS SQL CE DB and we don't
+# want to commit that to the repo.
+App_Data/
+
 # Build results
 [Dd]ebug/
 [Rr]elease/
