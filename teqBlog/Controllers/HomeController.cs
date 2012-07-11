@@ -36,6 +36,8 @@ namespace teqBlog.Controllers
        {
            if (ModelState.IsValid)
            {
+               //set datetime values
+               post.DateCreated = DateTime.Now;
                context.BlogPosts.Add(post);
                context.SaveChanges();
                return RedirectToAction("Index");

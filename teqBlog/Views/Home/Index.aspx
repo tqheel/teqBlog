@@ -7,12 +7,13 @@
     <title>teqBlog</title>
 </head>
 <body>
-    <h1>The teq Blog</h1>
+    <h1>Blog-O-Matic</h1>
     <div id="posts">
         <% foreach (var p in Model)
            { %>
             
            <h2><%= p.Title %></h2>
+           <span class="create-timestamp">Post Created: <%=p.DateCreated %></span>
            <div id="post<%= p.BlogPostID %>">
                 <%= p.Body %>
            </div>
