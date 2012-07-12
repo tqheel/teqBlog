@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>Create New Post</title>
+    <link href="~/Styles/main.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
     <% using (Html.BeginForm()) {%>

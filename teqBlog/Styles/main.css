@@ -1,0 +1,11 @@
+﻿body { font-size: 14pt; font-family:Courier }
+
+#posts { padding: 10px 10px 10px 10px; }
+
+.create-timestamp { font-size: .75em; }
+
+.whitespace { padding-bottom: 10px; }
+
+.post-title { font-weight: bold; font-size: 1.5em;}
+
+.post-body { padding: 0 15px 25px 15px; }

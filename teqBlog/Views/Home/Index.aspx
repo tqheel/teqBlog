@@ -5,16 +5,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>teqBlog</title>
+    <link href="~/Styles/main.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
-    <h1>Blog-O-Matic</h1>
+    <h1>teqBlog</h1>
     <div id="posts">
         <% foreach (var p in Model)
            { %>
             
-           <h2><%= p.Title %></h2>
-           <span class="create-timestamp">Post Created: <%=p.DateCreated %></span>
-           <div id="post<%= p.BlogPostID %>">
+           <div class="post-title"><%= p.Title %></div>
+           <div class="create-timestamp whitespace">Post Created: <%=p.DateCreated %></div>
+           <div class="post-body" id="post<%= p.BlogPostID %>">
                 <%= p.Body %>
            </div>
             
