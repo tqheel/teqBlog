@@ -32,10 +32,7 @@ namespace teqChecker
                 File.Copy(f, destFileName,false);
             }
 
-            //teqBlogEntities context = new teqBlogEntities();
-            //{
-
-            //}
+            
         }
     }
 }
