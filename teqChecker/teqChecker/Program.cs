@@ -18,6 +18,11 @@ namespace teqChecker
         static void Main(string[] args)
         {
             //Check monitored folder and move all files to images folder
+            if (!Directory.Exists(copyToDir))
+            {
+                //Create the target directory if it does not exist
+                Directory.CreateDirectory(copyToDir);
+            }
             string[] files = Directory.GetFiles(monitorDir);
             foreach (string f in files)
             {
