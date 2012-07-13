@@ -43,7 +43,10 @@ local.properties
 
 # Ignore the App_Data folder which will contain a MS SQL CE DB and we don't
 # want to commit that to the repo.
-App_Data/
+teqBlog/App_Data/
+
+# Ignore any file in the /images folder of the site
+teqBlog/images
 
 # Build results
 [Dd]ebug/
