@@ -39,7 +39,44 @@
 
 <h2>The Solution:</h2>
 
-<p>A console application that monitors a particular folder in DropBox and does the heavy lifting mentioned above.</p>
+<ul>
+    <li>A console application that monitors a particular folder in DropBox (I'm using DropBox, but you could use any local directory) and does the heavy 
+        lifting mentioned above (i.e., copies to website folder and resizes images).
+    </li>
+    <li>The DropBox app for iOS. No DropBox Developer API access is needed. I'm using DropBox purely as an end-user: uploading photos taken with an iPhone
+        to a specific folder that syncs with a desktop or server locally. Note that the source of the photo could be any device: PC, Mac, Android, etc. 
+        You don't even have to use DropBox. You could could configure the app to use any old directory that contains photos or other images.
+    </li>
+    <li>A simple ASP.NET MVC 2.0 blog app that uses the Entity Framework "Code-First" approach to generate the model. The real brains of this app
+        is the console app that 
+     </li>
+    <li>
+        SQL Server Compact Edition (a light-weight, file-based version of SQL Server) for storing the post data. 
+    </li>
+</ul>
+<h2>What's Complete</h2>
+<ul>
+    <li>The console application, "teqChecker".</li>
+    <li>A basic blog tool for creating a blog post and viewing all current posts in the db. There is not yet a provision
+        for making use of the uploaded photos (yeah, I know, this is the whole point but you are welcome to use your own blog tool with teqChecker 
+        if it pleases you! ;) )
+    </li>
+</ul>
+<h2>What's On My Current To-Do List</h2>
+<ul>
+    <li>
+        Obviously, image posting capability is job one.
+    </li>
+    <li>A post editor of some sort (I'm thinking of using the EpicEditor, MarkDown JS-based editor), so HTML markup can be utilized in posts (actually, this may be job 
+        one, now that I think about it. Hmmmmm...).
+    </li>
+    <li>Add user authentication through the ASP.Net Universal Membership Provider (I've been told it works with SQL Server CE.)</li>
+    <li>I've thought about adding an optional FTP function for folks who want to use teqChecker with a shared hosting deployment. I have not need for 
+        this at the moment, but I can see how it could come in handy for others. If there is some interest shown, I might be willing to give it a shot (feel free to fork 
+        my project and send me a pull request with your mods, of course).
+    </li>
+</ul>
+
       </section>
     </div>
 
