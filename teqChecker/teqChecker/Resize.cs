@@ -16,16 +16,16 @@ namespace teqChecker
         /// <param name="img">the image to resize</param>
         /// <param name="percentage">Percentage of change (i.e for 105% of the original provide 105)</param>
         /// <returns></returns>
-        public static Image ResizeImage(string fileName, int percentage)
+        public static void ResizeImage(string sourcefileName, string destinationFileName, int percentage)
         {
-            Image img = Image.FromFile(fileName);
+            Image img = Image.FromFile(sourcefileName);
             //get the height and width of the image
             int originalW = img.Width;
             int originalH = img.Height;
 
             //get the new size based on the percentage change
-            int resizedW = (int)(originalW * percentage);
-            int resizedH = (int)(originalH * percentage);
+            int resizedW = originalW * percentage/100;
+            int resizedH = originalH * percentage/100;
 
             //create a new Bitmap the size of the new image
             Bitmap bmp = new Bitmap(resizedW, resizedH);
@@ -37,7 +37,8 @@ namespace teqChecker
             //dispose and free up the resources
             graphic.Dispose();
             //return the image
-            return (Image)bmp;
+            Console.WriteLine("Saving resized image: " + destinationFileName);
+            bmp.Save(destinationFileName,ImageFormat.Jpeg);
         }
 
     }

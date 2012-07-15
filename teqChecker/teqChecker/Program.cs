@@ -14,7 +14,6 @@ namespace teqChecker
     {
         private static string monitorDir = ConfigurationManager.AppSettings["DirectoryToMonitor"];
         private static string copyToDir = ConfigurationManager.AppSettings["CopyToDirectory"];
-        private static string stagingDir = ConfigurationManager.AppSettings["StagingDirectory"];
 
         static void Main(string[] args)
         {
@@ -28,16 +27,16 @@ namespace teqChecker
             
             foreach (string f in files)
             {
-                string fileName = Path.GetFileName(f);
-               
-                string destFileName = Path.Combine(copyToDir, fileName);
-                destFileName = destFileName.Replace(" ", "_");
                 
-                File.Copy(f, destFileName,true);
-                //if file is a jpg image, then resize it
-                if (Path.GetExtension(f) == "jpg")
+                string fileName = Path.GetFileName(f);
+                string sourceFullPath = monitorDir + "\\" + fileName;
+
+                //if file is a jpg image, then resize it and save to destination path
+                if (Path.GetExtension(f) == ".jpg")
                 {
-                    Resize.ResizeImage(destFileName, 25);
+                    string destFileName = Path.Combine(copyToDir, fileName);
+                    destFileName = destFileName.Replace(" ", "_");
+                    Resize.ResizeImage(sourceFullPath, destFileName, 25);
                 }
             }
 
