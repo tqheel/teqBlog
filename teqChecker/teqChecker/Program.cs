@@ -36,7 +36,7 @@ namespace teqChecker
                 {
                     string destFileName = Path.Combine(copyToDir, fileName);
                     destFileName = destFileName.Replace(" ", "_");
-                    Resize.ResizeImage(sourceFullPath, destFileName, 25);
+                    Resize.ResizeImage(sourceFullPath, destFileName, 20);
                 }
             }
 
