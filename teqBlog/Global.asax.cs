@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Data.Entity;
-using teqBlog.Models;
+using teqBlogModel;
 
 namespace teqBlog
 {
@@ -30,8 +30,8 @@ namespace teqBlog
         {
             AreaRegistration.RegisterAllAreas();
 
-            //While under development. we want EF to drop and recreate our database each time the model changes
-            Database.SetInitializer<teqBlogEntities>(new DropCreateDatabaseIfModelChanges<teqBlogEntities>());
+            ////While under development. we want EF to drop and recreate our database each time the model changes
+            //Database.SetInitializer<teqBlogEntities>(new DropCreateDatabaseIfModelChanges<teqBlogEntities>());
 
             RegisterRoutes(RouteTable.Routes);
         }

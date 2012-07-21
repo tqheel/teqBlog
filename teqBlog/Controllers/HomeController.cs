@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using teqBlog.Models;
+using teqBlogModel;
 
 namespace teqBlog.Controllers
 {
@@ -38,7 +38,7 @@ namespace teqBlog.Controllers
            {
                //set datetime values
                post.DateCreated = DateTime.Now;
-               context.BlogPosts.Add(post);
+               context.BlogPosts.AddObject(post);
                context.SaveChanges();
                return RedirectToAction("Index");
            }

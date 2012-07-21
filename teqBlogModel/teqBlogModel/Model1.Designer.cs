@@ -63,10 +63,176 @@ namespace teqBlogModel
     
         #endregion
     
+        #region ObjectSet Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<BlogPost> BlogPosts
+        {
+            get
+            {
+                if ((_BlogPosts == null))
+                {
+                    _BlogPosts = base.CreateObjectSet<BlogPost>("BlogPosts");
+                }
+                return _BlogPosts;
+            }
+        }
+        private ObjectSet<BlogPost> _BlogPosts;
+
+        #endregion
+        #region AddTo Methods
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the BlogPosts EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBlogPosts(BlogPost blogPost)
+        {
+            base.AddObject("BlogPosts", blogPost);
+        }
+
+        #endregion
     }
     
 
     #endregion
     
+    #region Entities
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="teqBlogModel", Name="BlogPost")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class BlogPost : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new BlogPost object.
+        /// </summary>
+        /// <param name="blogPostID">Initial value of the BlogPostID property.</param>
+        /// <param name="title">Initial value of the Title property.</param>
+        /// <param name="body">Initial value of the Body property.</param>
+        /// <param name="dateCreated">Initial value of the DateCreated property.</param>
+        public static BlogPost CreateBlogPost(global::System.Int32 blogPostID, global::System.String title, global::System.String body, global::System.DateTime dateCreated)
+        {
+            BlogPost blogPost = new BlogPost();
+            blogPost.BlogPostID = blogPostID;
+            blogPost.Title = title;
+            blogPost.Body = body;
+            blogPost.DateCreated = dateCreated;
+            return blogPost;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BlogPostID
+        {
+            get
+            {
+                return _BlogPostID;
+            }
+            set
+            {
+                if (_BlogPostID != value)
+                {
+                    OnBlogPostIDChanging(value);
+                    ReportPropertyChanging("BlogPostID");
+                    _BlogPostID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("BlogPostID");
+                    OnBlogPostIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _BlogPostID;
+        partial void OnBlogPostIDChanging(global::System.Int32 value);
+        partial void OnBlogPostIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Title
+        {
+            get
+            {
+                return _Title;
+            }
+            set
+            {
+                OnTitleChanging(value);
+                ReportPropertyChanging("Title");
+                _Title = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Title");
+                OnTitleChanged();
+            }
+        }
+        private global::System.String _Title;
+        partial void OnTitleChanging(global::System.String value);
+        partial void OnTitleChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Body
+        {
+            get
+            {
+                return _Body;
+            }
+            set
+            {
+                OnBodyChanging(value);
+                ReportPropertyChanging("Body");
+                _Body = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Body");
+                OnBodyChanged();
+            }
+        }
+        private global::System.String _Body;
+        partial void OnBodyChanging(global::System.String value);
+        partial void OnBodyChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime DateCreated
+        {
+            get
+            {
+                return _DateCreated;
+            }
+            set
+            {
+                OnDateCreatedChanging(value);
+                ReportPropertyChanging("DateCreated");
+                _DateCreated = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DateCreated");
+                OnDateCreatedChanged();
+            }
+        }
+        private global::System.DateTime _DateCreated;
+        partial void OnDateCreatedChanging(global::System.DateTime value);
+        partial void OnDateCreatedChanged();
+
+        #endregion
+    
+    }
+
+    #endregion
     
 }
