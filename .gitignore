@@ -47,6 +47,7 @@ teqBlog/App_Data/
 
 # Ignore any file in the /images folder of the site
 teqBlog/images
+teqBlog/Views/Home/images
 
 # Build results
 [Dd]ebug/
