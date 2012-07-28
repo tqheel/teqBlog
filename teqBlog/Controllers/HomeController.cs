@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using teqBlogModel;
+using System.Data.Entity;
 
 namespace teqBlog.Controllers
 {
